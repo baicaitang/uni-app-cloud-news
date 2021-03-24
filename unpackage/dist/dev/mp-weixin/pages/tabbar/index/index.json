@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "my-app",
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "navbar": "/components/navbar/navbar",
+    "tabs": "/components/tabs/tabs",
+    "list": "/components/list/list"
+  }
+}

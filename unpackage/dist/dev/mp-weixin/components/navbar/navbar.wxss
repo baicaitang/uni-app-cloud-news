@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: "iconfont";
+  src: url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPQAAsAAAAAB8QAAAOEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDHIMDATYCJAMMCwgABCAFhG0HRhvZBsgOpSDNiIBRIAFlPHzt9zv37f7vCa3QNDFUsaiRRCTRTSLJNJIaQ7JII3sJ7+frtDcsoFmpotP0T+LJTiYFfV5Ytz1VOKVL/M8x06VQ9F+lS0ZZ0t4AxwMaWMYlHjUe8B3IAfmpgGcz0B30+2kCaHJ3HDaXmJ4PhkjetgBiXSYRgWHNiRzpDIYwdM/ZDDtFMSyOizcAJ+nvxz/4hiEoUIm3d3ktoRaiv9y+96SOskN5jKDazg/lEkjACJBBrPYGVxB5cQTB2DKS441VJAy+VaYsSZW2mb7oPx4OosprbwMMwFC8KFXII8D3HgVwSJurQA3YBZ7I2rX00VSvpYWVs6nFzpI+v2O5YHW16OHy8GrYRyG28qH8XejLSqG8kVtaSn6giO4SPTM7O+9we9Vk/mYuf27GdmYBwDI8jx09OCxuLJyzv76KrawULi3l8+Xr9FzZFVwcXuxsWuFb5a+sNM4M2Rfaz81fnu+wK5jtYIgj6yTDkOvl4WcCY43iGqSVLl4F+0R5ezyr3ASOSAiLi70MorzO9K23wrxrmAxio/pkewHuy+KvxqohblxxTAfjn+KAnzpy4Ojsqf1/UUi4prX1+4PsXrvjARbUhmk9bdZ/nCr29tHrd+t66h2KPYnp5zfTBGSw4dO4+/PraWKswqUxsXB3tz/RKjHg96Ni5/SZZpxksBE7cJ4+Xb7fo89NXb1j/a7eWsnGLDaq1zc4QDVAuZKBGAIoH6R3Ivmv+xt48Cw1rbII/29okgE+2zbt0nj5IOOFQf2NhQL8USrmWLY1nitlUxkq3UpSgPoa5JCrJn9PN3TYWW7uZrcTDNmVUDDgBomh/ciMPQ4VJvyhylAUNB2TdLnFBo+A5QYwpJcAY+k64Mw9B4Kl90gSuw0Ue9+BZhkEGCsMmzuaOBgy4zgeiQRUy9Q0MjIxp2YDj2CcdeYiiU4p4qualFyIeK0sw/h4ejcrSUiN+C0OaOskvoLAMizPqZhEeh5SKjlGw3NyJBY8pYKgCfXyYvteyVPMqcBYHB4iIkBqMWo0YsiIcdTYeLrAuPXzuRAJHSURfmSkJV0I4WnJ5mf48OTNQCYZ1ayRV3mJVh0JXwIBi8HicVQYieRHlH6Rw9D0r5JDxASepAvyGqG8hEks1+h5vFn1/c5Ak7c0RREpMpv5uKon/7AqnRbxVaxMqazyo7VIxIulAA==") format("woff2");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-LC_icon_user_fill_3:before {
+  content: "\e61d";
+}
+.icon-search:before {
+  content: "\e721";
+}
+.navbar .navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: #f07373;
+}
+.navbar .navbar-fixed .navbar-content {
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  box-sizing: border-box;
+}
+.navbar .navbar-fixed .navbar-content .navbar-search {
+  padding: 0 10px;
+  height: 30px;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+.navbar .navbar-fixed .navbar-content .navbar-search .navbar-search-icon {
+  margin-right: 10px;
+}
+.navbar .navbar-fixed .navbar-content .navbar-search .navbar-search-text {
+  width: 100%;
+  font-size: 14px;
+  color: #999;
+}
+.navbar .navbar-fixed .navbar-content.issearch {
+  padding-left: 0;
+}
+.navbar .navbar-fixed .navbar-content.issearch .navbar-content-search-icons {
+  margin: 0 10px;
+}
+.navbar .navbar-fixed .navbar-content.issearch .navbar-search {
+  border-radius: 5px;
+}
+
