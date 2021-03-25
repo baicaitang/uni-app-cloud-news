@@ -1,10 +1,14 @@
+import store from "../store/index.js";
+
 export default function $http(options){
 	let {
 		url,data,
 	} = options
 	
+	// 获取状态管理的用户信息
+	
 	const dataObj = {
-		user_id:"6058a4fcf83a000001d91797",
+		user_id:store.state.userinfo._id,
 		...data
 	}
 	// console.log(options)

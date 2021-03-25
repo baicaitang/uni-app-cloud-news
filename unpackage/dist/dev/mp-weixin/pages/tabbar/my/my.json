@@ -1,6 +1,8 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "我的",
   "enablePullDownRefresh": false,
-  "navigationStyle": "custom",
-  "usingComponents": {}
+  "navigationBarBackgroundColor": "#f8f8f8",
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons"
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "评论",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#f8f8f8",
+  "usingComponents": {
+    "comments-box": "/components/comments-box/comments-box",
+    "uni-load-more": "/components/uni-load-more/uni-load-more",
+    "popup": "/components/popup/popup"
+  }
+}

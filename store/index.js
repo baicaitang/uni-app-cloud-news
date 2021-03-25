@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	state:{
-		historyList: uni.getStorageSync('search_history') || [] //保存搜索历史
+		historyList: uni.getStorageSync('search_history') || [], //保存搜索历史
+		userinfo: uni.getStorageSync("userinfo") || {}
 	},
 	mutations:{
 		SET_HISTORYLIST(state,history){
@@ -13,6 +14,9 @@ const store = new Vuex.Store({
 		},
 		CLEAR_HISTORY(state,history){
 			state.historyList = []
+		},
+		SET_USERINFO(state,userinfo){
+			state.userinfo = userinfo
 		}
 	},
 	actions:{
@@ -28,6 +32,10 @@ const store = new Vuex.Store({
 		claer_history({commit,state}){
 			uni.removeStorageSync('search_history')
 			commit('CLEAR_HISTORY')
+		},
+		set_userinfo({commit},userinfo){
+			uni.setStorageSync('userinfo',userinfo)
+			commit("SET_USERINFO",userinfo)
 		}
 	}
 })

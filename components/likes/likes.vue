@@ -1,7 +1,7 @@
 <template>
-	<view class="icons">
+	<view class="icons" @click.stop="likeTap">
 		<!-- 如果父组件有click事件，@click.stop="likeTap"阻止事件冒泡 -->
-		<uni-icons :type="like ? 'heart-filled' : 'heart' " size="20" color="#f07373" @click="likeTap"></uni-icons>
+		<uni-icons :type="like ? 'heart-filled' : 'heart' " size="20" color="#f07373" ></uni-icons>
 	</view>
 </template>
 
@@ -14,7 +14,13 @@
 				default:()=>{
 					return {}
 				}
-			}
+			},
+			// 判断点击收藏是哪一个页面
+			types:{
+				type:String,
+				default:""
+			},
+		
 		},
 		data() {
 			return {
@@ -47,6 +53,11 @@
 						title:this.like?"收藏成功":"取消收藏",
 						icon:"none"
 					})
+					// 收藏与首页内容关联
+					// 只要点击收藏就会触发所有updata_article自定义事件，需要在更新的组件里加判断
+					console.log(this.types)
+					uni.$emit('updata_article',this.types)
+					
 				}).catch(err=>{
 					console.log(err)
 					uni.hideLoading()

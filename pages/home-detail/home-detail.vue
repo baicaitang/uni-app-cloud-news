@@ -32,9 +32,14 @@
 				<view class="comment-title">
 					最新评论
 				</view>
-				<view class="comment-content" v-for="item in commentsList" :key="item.comment_id">
+
+				<view class="noComment" v-if="commentsList.length === 0">
+					快来添加评论吧~
+				</view>
+				<view class="comment-content" v-for="item in commentsList" :key="item.comment_id" >
 					<comments-box :comments="item" @reply="reply"></comments-box>
 				</view>
+				
 			</view>
 		</view>
 		<!-- 工具栏 -->
@@ -194,6 +199,9 @@
 					author_id
 				}).then(res => {
 					console.log(res)
+					
+					uni.$emit('update_author')
+					
 					uni.hideLoading()
 					this.formData.is_author_like = !this.formData.is_author_like
 					uni.showToast({
@@ -213,7 +221,8 @@
 				}).then(res => {
 					// console.log(res)
 					// 通知首页更新收藏
-					uni.$emit("update_article")
+					uni.$emit("update_article","follow")
+					
 					this.formData.is_like = !this.formData.is_like
 					uni.hideLoading()
 					uni.showToast({
@@ -327,6 +336,15 @@
 
 		.detail-comment {
 			margin-top: 30px;
+			
+			.noComment{
+				padding: 15px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #666;
+				font-size: 14px;
+			}
 
 			.comment-title {
 				padding: 10px 15px;

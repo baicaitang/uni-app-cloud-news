@@ -10,6 +10,7 @@
 </template>
 
 <script>
+	import  {mapState} from "vuex"
 	export default {
 		components:{},
 		data() {
@@ -19,13 +20,22 @@
 				activeIndex:0,
 			}
 		},
+		computed:{
+			...mapState(['userinfo'])
+		},
+		watch:{
+			userinfo(newVal){
+				this.getLabel()
+			}
+		},
 		onLoad() {
-			this.getLabel()
+			
 			// 监听标签更新完成
 			uni.$on('labelChange',(res)=>{
 				this.labelList = []
 				this.tabIndex = 0
 				this.activeIndex = 0
+				
 				this.getLabel()
 			})
 			

@@ -73,3 +73,41 @@ export const update_thumbsup = (data) =>{
 		data
 	})
 }
+
+//收藏文章
+export const get_follow = (data) =>{
+	return $http({
+		url:'get-follow',
+		data
+	})
+}
+// 关注作者
+export const get_author = (data) =>{
+	return $http({
+		url:'get-author',
+		data
+	})
+}
+
+// 获取个人信息
+export const get_user = (data) =>{
+	return $http({
+		url:'get-user',
+		data
+	})
+}
+// 获取我的文章
+export const get_my_article = (data) =>{
+	return $http({
+		url:'get-my-article',
+		data
+	})
+}
+
+// 更新反馈
+export const update_feedback = (data) =>{
+	return $http({
+		url:'update-feedback',
+		data
+	})
+}

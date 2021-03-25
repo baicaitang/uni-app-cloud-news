@@ -36,6 +36,7 @@
 				<comments-box :comments="item" :reply="true" @reply="commentsReply"></comments-box>
 			</view>
 		</view>
+
 	</view>
 </template>
 

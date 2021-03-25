@@ -94,7 +94,18 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
-  onLaunch: function onLaunch() {
+  onLaunch: function onLaunch() {var _this = this; //应用启动时触发，全局只触发一次
+    // 获取个人用户信息 --- 模拟登录
+    this.$api.get_user({
+      user_id: "6058a4fcf83a000001d91794" }).
+    then(function (res) {
+      console.log(res);
+      // 持久化存储
+      _this.$store.dispatch("set_userinfo", res.data);
+
+    }).catch(function (err) {
+      console.log(err);
+    });
     console.log('App Launch');
   },
   onShow: function onShow() {

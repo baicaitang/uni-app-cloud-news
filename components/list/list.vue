@@ -42,10 +42,14 @@
 			// tab在初始化时可能未能拿到
 			// this.getList(0)
 			// 文章详情收藏后更新
-			uni.$on("update_article",()=>{
-				this.listCatchData = {} //更新页面数据缓存
-				this.load = {}
-				this.getList(this.activeIndex)
+			uni.$on("update_article",(types)=>{
+				console.log(types)
+				if(types === 'follow'){
+					this.listCatchData = {} //更新页面数据缓存
+					this.load = {}
+					this.getList(this.activeIndex)
+				}
+				
 			})
 		},
 		methods:{

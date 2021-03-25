@@ -96,13 +96,13 @@ var components
 try {
   components = {
     navbar: function() {
-      return __webpack_require__.e(/*! import() | components/navbar/navbar */ "components/navbar/navbar").then(__webpack_require__.bind(null, /*! @/components/navbar/navbar.vue */ 66))
+      return __webpack_require__.e(/*! import() | components/navbar/navbar */ "components/navbar/navbar").then(__webpack_require__.bind(null, /*! @/components/navbar/navbar.vue */ 94))
     },
     tabs: function() {
-      return __webpack_require__.e(/*! import() | components/tabs/tabs */ "components/tabs/tabs").then(__webpack_require__.bind(null, /*! @/components/tabs/tabs.vue */ 73))
+      return __webpack_require__.e(/*! import() | components/tabs/tabs */ "components/tabs/tabs").then(__webpack_require__.bind(null, /*! @/components/tabs/tabs.vue */ 101))
     },
     list: function() {
-      return __webpack_require__.e(/*! import() | components/list/list */ "components/list/list").then(__webpack_require__.bind(null, /*! @/components/list/list.vue */ 80))
+      return __webpack_require__.e(/*! import() | components/list/list */ "components/list/list").then(__webpack_require__.bind(null, /*! @/components/list/list.vue */ 108))
     }
   }
 } catch (e) {
@@ -159,18 +159,19 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+var _vuex = __webpack_require__(/*! vuex */ 21);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 {
   components: {},
   data: function data() {
@@ -180,13 +181,22 @@ var _default =
       activeIndex: 0 };
 
   },
+  computed: _objectSpread({},
+  (0, _vuex.mapState)(['userinfo'])),
+
+  watch: {
+    userinfo: function userinfo(newVal) {
+      this.getLabel();
+    } },
+
   onLoad: function onLoad() {var _this = this;
-    this.getLabel();
+
     // 监听标签更新完成
     uni.$on('labelChange', function (res) {
       _this.labelList = [];
       _this.tabIndex = 0;
       _this.activeIndex = 0;
+
       _this.getLabel();
     });
 

@@ -11,14 +11,14 @@
 
 <script>
 	export default {
-		name:"scroll-list",
+		name: "scroll-list",
 		data() {
 			return {
-				
+
 			};
 		},
-		methods:{
-			loadmore(){
+		methods: {
+			loadmore() {
 				this.$emit("loadmore")
 			}
 		}
@@ -26,12 +26,13 @@
 </script>
 
 <style lang="scss">
-.scroll{
+	.scroll {
+		height: 100%;
 		flex: 1;
 		overflow: hidden;
 		box-sizing: border-box;
-		
-		.scroll-wrap{
+
+		.scroll-wrap {
 			height: 100%;
 			display: flex;
 			flex-direction: column;
